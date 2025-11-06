@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 全局去除a标签下划线和li标签默认样式 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* 首页样式 */
+/* 版心 */
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+/* 其他样式保持不变... */
+
+body {
+  background-color: #f3f5f7;
+}
+/* 头部区域 */
+.header {
+  height: 100px;
+  background-color: #fff;
+}
+.header .wrapper {
+  display: flex;
+  padding-top: 29px;
+}
+.logo a {
+  height: 41px;
+  width: 196px;
+  display: block;
+  background-image: url("image/logo 1.png");
+  font-size: 0;
+}
+/* 导航 */
+.nav {
+  margin-left: 95px;
+}
+.nav ul {
+  display: flex;
+}
+.nav li {
+  margin-right: 24px;
+}
+.nav li a {
+  text-decoration: none;
+  padding: 6px 8px;
+  color: #333;
+  font-size: 19px;
+  display: block;
+  line-height: 32px;
+}
+.nav li a.active,
+.nav li a:hover {
+  border-bottom: 2px solid #00a4ff;
+}
+/* 搜索部分 */
+.search {
+  display: flex;
+  width: 412px;
+  height: 40px;
+  margin-left: 64px;
+  border-radius: 20px;
+  background-color: #f3f5f7;
+  padding-left: 19px;
+  padding-right: 12px;
+}
+.search input {
+  flex: 1;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.search input::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+.search a {
+  align-self: center;
+  width: 22px;
+  height: 22px;
+  background-image: url("https://bpic.588ku.com/element_origin_min_pic/19/04/25/9b6446b6f98580fd7ff33998bb4c0096.jpg");
+  background-size: cover;
+}
+/* 用户 */
+.user {
+  margin-left: 32px;
+  margin-top: -4px;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+}
+.user a {
+  display: flex; /* 使用flex布局 */
+  gap: 7px; /* 图片和文字之间的间距 */
+}
+.user img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; /* 将头像变成圆形 */
+  object-fit: cover; /* 确保图片比例正常 */
+}
+.user span {
+  font-size: 16px;
+  color: #666;
+}
+/* banner布局 */
+.banner {
+  height: 420px;
+  background-color: #0092cb;
+}
+.banner .wrapper {
+  height: 420px;
+  background-image: url("https://img-blog.csdnimg.cn/wm/7b84378fc5fbc7cbdc2645394e90c5e7.jpg?x-oss-process=image/resize,h_236,w_382");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+.banner .left {
+  padding: 3px 20px;
+  width: 191px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+.banner .left a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 46px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #fff;
+}
+/* 添加右侧白色箭头 */
+.banner .left a::after {
+  content: ">";
+  color: white;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.banner .left a:hover,
+.banner .left a:hover::after {
+  color: #00a4ff;
+}
+/* 课程表 */
+.banner .right {
+  margin-top: 60px;
+  width: 218px;
+  height: 305px;
+  background-color: #209dd5;
+  border-radius: 10px;
+}
+.banner h3 {
+  margin-left: 14px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+}
+.banner .right .content {
+  padding: 14px;
+  height: 257px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.banner .right dl {
+  border-bottom: #e0e0e0 1px solid;
+  margin-bottom: 12px;
+}
+.banner .right dt {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.banner .right dd {
+  font-size: 12px;
+  margin-bottom: 8px;
+  line-height: 16px;
+}
+.banner .right dd span {
+  color: #00a4ff;
+}
+.banner .right dd strong {
+  color: #7d7d7d;
+  font-weight: 400;
+}
+.banner .right a {
+  display: block;
+  height: 32px;
+  background-color: #00a4ff;
+  border-radius: 15px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  line-height: 32px;
+}
+/* 精品推荐 */
+.recommend {
+  display: flex;
+  margin-top: 11px;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(211, 211, 211, 0.5);
+}
+.recommend h3 {
+  font-size: 18px;
+  color: #00a4ff;
+  font-weight: 400;
+}
+.recommend ul {
+  display: flex;
+  /* 除去标题和修改兴趣的部分，父级的全部尺寸都给别，实现把修改兴趣挤到最右 */
+  flex: 1;
+}
+.recommend ul li a {
+  padding: 0 24px;
+  border-right: 1px solid #e0e0e0;
+  font-size: 18px;
+  color: #333;
+}
+.recommend ul li:last-child a {
+  border-right: 0;
+}
+.recommend .modify {
+  font-size: 16px;
+  color: #00a4ff;
+}
+.course {
+  margin-top: 15px;
+}
+.hd {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 21px;
+  font-weight: 400;
+}
+.hd .more {
+  font-size: 14px;
+  color: #999;
+}
+.bd ul {
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+.bd li {
+  margin-bottom: 14px;
+  width: 228px;
+  height: 271px;
+  background-color: pink;
+}
+.bd li .pic {
+  height: 156px;
+}
+.bd li .text {
+  padding: 20px;
+  height: 115px;
+  background-color: #fff;
+}
+.bd li .text h4 {
+  margin-bottom: 13px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.bd li .text p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+}
+.bd li .text span {
+  color: #fa6400;
+}
+.bd li .text p i {
+  font-style: normal;
+}
+/* 前端部分 */
+.hd li .active {
+  color: #00a4ff;
+}
+.hd ul {
+  display: flex;
+}
+.hd li {
+  margin-right: 60px;
+  font-size: 16px;
+}
+.bd {
+  display: flex;
+  justify-content: space-between;
+}
+.bd .right .top {
+  height: 100px;
+  margin-bottom: 15px;
+}
+/* 版权 */
+.footer {
+  margin-top: 60px;
+  padding-top: 60px;
+  height: 273px;
+  background-color: #fff;
+}
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .left {
+  width: 400px;
+}
+.footer .wrapper p {
+  margin-top: 24px;
+  margin-bottom: 14px;
+  line-height: 17px;
+  color: #999;
+  font-size: 12px;
+}
+.footer .left .download {
+  display: block;
+  height: 36px;
+  width: 120px;
+  border: #00a4ff 1px solid;
+  color: #00a4ff;
+  line-height: 34px;
+  text-align: center;
+  font-size: 16px;
+}
+.footer .right {
+  display: flex;
+}
+.footer .right dl {
+  margin-left: 130px;
+}
+.footer .right dt {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 23px;
+}
+.footer .right a {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+}
